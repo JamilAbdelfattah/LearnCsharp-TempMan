@@ -2,7 +2,7 @@
 A CLI application that converts a unit of temperature into every other unit of temperature.
 
 ## Getting Started
-* Clone the project: <br/>
+* Create a branch for the project: <br/>
 ```git clone https://github.com/JamilAbdelfattah/LearnCsharp-TempMan```
 * open the project in **Visual Studio**
 * Start coding.
@@ -32,5 +32,12 @@ Here are some Wiki articles with formulas!<br/>
 [Réaumur]
 [Rankine]
 [Delisle]
+
+###Finsihed?
+Push to your branch by:<br/>
+```git add .```<br/>
+```git commit -m "Your message here"```<br/>
+```git push origin [BranchName]```
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/JamilAbdelfattah/LearnCsharp-TempMan/blob/master/LICENSE) file for details
