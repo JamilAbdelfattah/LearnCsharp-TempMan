@@ -20,5 +20,17 @@ A CLI application that converts a unit of temperature into every other unit of t
 ```TempMan.exe -k 52```<br/>
 ##### this is the functionality you will be replicating, when you create your solution.
 
+### Wiki
+Confused about the units?
+Here are some Wiki articles with formulas!
+[Units of Temperature](https://en.wikipedia.org/wiki/Category:Units_of_temperature)
+[Fahrenheit]
+[Celsius]
+[Kelvin]
+[Planck]
+[Rømer]
+[Réaumur]
+[Rankine]
+[Delisle]
 ## License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/JamilAbdelfattah/LearnCsharp-TempMan/blob/master/LICENSE) file for details
