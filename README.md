@@ -21,9 +21,9 @@ A CLI application that converts a unit of temperature into every other unit of t
 ##### this is the functionality you will be replicating, when you create your solution.
 
 ### Wiki
-Confused about the units?
-Here are some Wiki articles with formulas!
-[Units of Temperature](https://en.wikipedia.org/wiki/Category:Units_of_temperature)
+Confused about the units?<br/>
+Here are some Wiki articles with formulas!<br/>
+[Units of Temperature](https://en.wikipedia.org/wiki/Category:Units_of_temperature)<br/>
 [Fahrenheit]
 [Celsius]
 [Kelvin]
