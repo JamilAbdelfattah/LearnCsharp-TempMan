@@ -8,13 +8,13 @@ A CLI application that converts a unit of temperature into every other unit of t
 * Start coding.
 
 ### Prerequisites
-[git-scm](https://git-scm.com/) - The tool used to interact with github
+[Git-scm](https://git-scm.com/) - The tool used to interact with github.
+[VisualStudio - Community Edition](https://visualstudio.microsoft.com/vs/community/) - The IDE being used.
 
 ### Demo
-[TempMan.exe](https://github.com/JamilAbdelfattah/LearnCsharp-TempMan/blob/master/LICENSE)
-* Download the executable
-* In command-prompt cd to its Directory:<br/>
-* Run these commands: <br/>
+#[Download](https://github.com/JamilAbdelfattah/LearnCsharp-TempMan/blob/master/LICENSE) the executable.
+#Open command-prompt and [cd](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cd) to its Directory:<br/>
+#Run these commands: <br/>
 ```TempMan.exe -f 52```<br/>
 ```TempMan.exe -c 52```<br/>
 ```TempMan.exe -k 52```<br/>
