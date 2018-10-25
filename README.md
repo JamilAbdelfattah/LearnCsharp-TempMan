@@ -42,4 +42,4 @@ Push to your branch by:<br/>
 [Git guide](http://rogerdudler.github.io/git-guide/)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/JamilAbdelfattah/LearnCsharp-TempMan/blob/master/LICENSE) file for details
+This project is licensed under the Mozilla Public License 2.0 - see the [LICENSE](https://github.com/JamilAbdelfattah/LearnCsharp-TempMan/blob/master/LICENSE) file for details
