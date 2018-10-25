@@ -4,7 +4,7 @@ A CLI application that converts a unit of temperature into every other unit of t
 
 ## Getting Started
 
-* Clone the project
+* Clone the project \n
 ```git clone https://github.com/JamilAbdelfattah/LearnCsharp-TempMan```
 * open the project in **Visual Studio**
 *  
