@@ -8,7 +8,7 @@ A CLI application that converts a unit of temperature into every other unit of t
 * Start coding.
 
 ### Prerequisites
-[Git-scm](https://git-scm.com/) - The tool used to interact with github.
+[Git-scm](https://git-scm.com/) - The tool used to interact with github. <br/>
 [VisualStudio - Community Edition](https://visualstudio.microsoft.com/vs/community/) - The IDE being used.
 
 ### Demo
