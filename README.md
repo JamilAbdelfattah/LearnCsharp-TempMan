@@ -33,7 +33,7 @@ Here are some Wiki articles with formulas!<br/>
 [Rankine]
 [Delisle]
 
-### Finsihed?
+### Finished?
 Push to your branch by:<br/>
 ```git add .```<br/>
 ```git commit -m "Your message here"```<br/>
