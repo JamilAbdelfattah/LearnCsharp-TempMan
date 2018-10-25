@@ -37,7 +37,9 @@ Here are some Wiki articles with formulas!<br/>
 Push to your branch by:<br/>
 ```git add .```<br/>
 ```git commit -m "Your message here"```<br/>
-```git push origin [BranchName]```
+```git push origin [BranchName]```<br/>
+#### Still need help?
+[Git guide](http://rogerdudler.github.io/git-guide/)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/JamilAbdelfattah/LearnCsharp-TempMan/blob/master/LICENSE) file for details
