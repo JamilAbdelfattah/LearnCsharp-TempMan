@@ -80,6 +80,7 @@ Push to your branch by:<br/>
 ```git push origin [ForkName]```<br/>
 #### Still need help?
 [Git guide](http://rogerdudler.github.io/git-guide/)
+[String Args don't make sense](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/main-and-command-args/command-line-arguments)
 
 ## License
 This project is licensed under the Mozilla Public License 2.0 - see the [LICENSE](https://github.com/JamilAbdelfattah/LearnCsharp-TempMan/blob/master/LICENSE) file for details
