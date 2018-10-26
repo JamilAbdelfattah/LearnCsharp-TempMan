@@ -6,14 +6,14 @@ A CLI application that converts a unit of temperature into every other unit of t
 * Fork the project
 
 * Clone YOUR fork:
-```git clone https://github.com/[YourUserName]/LearnCsharp-TempMan```
+```git clone https://github.com/[YourUserName]/LearnCsharp-TempMan```<br/>
 ***Note**: This will create a folder in what ever your current directory is...*
 
 * open the project in **Visual Studio**
 * Start `coding`.
 
 ### Prerequisites
-[Git-scm](https://git-scm.com/) - The tool used to interact with github. 
+[Git-scm](https://git-scm.com/) - The tool used to interact with github. <br/>
 ***Note**: This isn't required. if you want to use git kraken or just download the project go for it,*
 
 [VisualStudio - Community Edition](https://visualstudio.microsoft.com/vs/community/) - The IDE being used.
@@ -43,7 +43,7 @@ A CLI application that converts a unit of temperature into every other unit of t
 * [Download](https://github.com/JamilAbdelfattah/LearnCsharp-TempMan/blob/master/LICENSE) the executable.
 * Open command-prompt and [cd](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cd) to its Directory:
 * Run this command: 
-```TempMan.exe -f 52```
+```TempMan.exe 52 -f```<br/>
 ***Output:***
     ```
     units for 52F:
@@ -81,7 +81,7 @@ Push to your branch by:<br/>
 ```git commit -m "Your message here"```<br/>
 ```git push origin [ForkName]```<br/>
 #### Still need help?
-[Git guide](http://rogerdudler.github.io/git-guide/)
+[Git guide](http://rogerdudler.github.io/git-guide/)<br/>
 [String Args don't make sense](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/main-and-command-args/command-line-arguments)
 
 ## License
