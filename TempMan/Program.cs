@@ -4,50 +4,98 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/**
- * I know this seems a bit hard, but give it a try and if you get stuck let me know,
- * Its really not that bad, but you need to learn not to get scared, this project isn't hard its just seems like it.
- * 
- * But I hope you have fun, and write something you're proud of. We'll continue to expland on this so keep that in mind.
- * So as a note don't worry about having other 'classes (files) we'll do that later right now just do you solution in this class.
- * 
- * Things to note, the main method is the starting point of every application, everything has one, discord does, and visualstudio does too!
- * If you get stuck, an important skill to learn is unblocking yourself, and you can't learn it if you don't get stuck.
- * Don't feel stupid or dumb, everyone gets stuck on something stupid, it happened to me today... named my main method at work with a 
- * capital M and in Java its suppose to be lowercase, spent 3 hours trying to figure it out. it happens...
- * 
- * Also a switch statement would be REALLY helpful for processing the arguments. don't worry about getting every feature just start with the basics
- * start with handling only one arg at a time.
- * */
-
 namespace TempMan
 {
     class Program
     {
-        //args are the values after tempman.exe, such as 32 -f -out c:/
+
+        private static bool uiMode = false;
+
         static void Main(string[] args)
         {
+            args = new string[] { "32", "-F" };
+            string[] converts = ConvertAll(ProcessArguments(args));
+
+            if (uiMode)
+            {
+
+            }
+            else
+            {
+                printConversionSummary(args[0] + args[1].Replace("-", ""), converts);
+            }
         }
 
-        /**
-         * This is a bad way of doing this but, I need you to be comfortable with arrays, 
-         * and the best way I know how to do that is to do it the dumb hard way.
-         * but your array should look like that gets passed into this function should be like...
-         * 
-         * if the command args were tempman.exe 32 -f
-         * [32F, Celsius-29C, Kelvin-29K, Romer-60Ro, Reaumur-80Re, ...]
-         * 
-         * Do not include Fahrenheit except for the first element just like it appears,
-         * 
-         * if it was tempman.exe 32 -c that was passed in your array should be
-         * [32C, Fahrenheit-29F, Kelvin-29K, Romer-60Ro, Reaumur-80Re, ...]
-         * 
-         * */
-        private static void printConversionSummary(string[] convertedTemps)
+
+        private static string[] ConvertAll(double kelvin)
+        {
+            string[] convertedTemps = {
+                                        "Fahrenheit-" + ConvertToFahrenheit(kelvin),
+                                        "Celsius-" + ConvertToCelsius(kelvin),
+                                        "Kelvin-" + ConvertToKevin(kelvin),
+                                        "Romer-" + ConvertToRomer(kelvin),
+                                        "Reaumur-" + ConvertToReaumur(kelvin),
+                                        "Newton-" + ConvertToNewton(kelvin),
+                                        "Rankine-" + ConvertToRankine(kelvin),
+                                        "Delisle-" + ConvertToDelisle(kelvin)
+                                     };
+            return convertedTemps;
+        }
+
+        private static double ProcessArguments(string[] args)
+        {
+            double unKnown = double.Parse(args[0]);
+            double kelvin = 0;
+
+            foreach (string arg in args)
+            {
+                switch (arg)
+                {
+                    case "-F":
+                        kelvin = ConvertFromFahrenheit(unKnown);
+                        break;
+                    case "-C":
+                        kelvin = ConvertFromCelsius(unKnown);
+                        break;
+                    case "-K":
+                        kelvin = unKnown;
+                        break;
+                    case "-Ro":
+                        kelvin = ConvertFromRomer(unKnown);
+                        break;
+                    case "-Re":
+                        kelvin = ConvertFromReaumur(unKnown);
+                        break;
+                    case "-N":
+                        kelvin = ConvertFromNewton(unKnown);
+                        break;
+                    case "-R":
+                        kelvin = ConvertFromRankine(unKnown);
+                        break;
+                    case "-De":
+                        kelvin = ConvertFromDelisle(unKnown);
+                        break;
+                    case "-to":
+                        break;
+                    case "-RandCon":
+                        break;
+                    case "-Out":
+                        break;
+                    case "-Ui":
+                        uiMode = true;
+                        break;
+                }
+            }
+
+            return kelvin;
+        }
+
+        private static void printConversionSummary(string orignalTemp, string[] convertedTemps)
         {
             Console.WriteLine("=============================");
-            Console.WriteLine($"units for {convertedTemps[0]}:");
-            foreach(string temp in convertedTemps)
+            Console.WriteLine($"units for {orignalTemp}:");
+
+            foreach (string temp in convertedTemps)
             {
                 printConversion(temp.Split('-'));
             }
@@ -57,6 +105,87 @@ namespace TempMan
         private static void printConversion(string[] unitValue)
         {
             Console.WriteLine($"{unitValue[0]}:\t\t{unitValue[1]}");
+        }
+
+        /////////////////////////////////////////////////////////
+        //Converting from Kelvin
+        /////////////////////////////////////////////////////////
+        private static string ConvertToFahrenheit(double kelvin)
+        {
+            return kelvin * (9 / 5) - 459.67 + "F";
+        }
+
+        private static string ConvertToCelsius(double kelvin)
+        {
+            return kelvin - 273.15 + "C";
+        }
+
+        private static string ConvertToRomer(double kelvin)
+        {
+            return (kelvin - 273.15) * (21 / 40) + 7.5 + "Ro";
+        }
+
+        private static string ConvertToReaumur(double kelvin)
+        {
+            return (kelvin - 273.15) * (9 / 5) + "Re";
+        }
+
+        private static string ConvertToNewton(double kelvin)
+        {
+            return (kelvin - 273.15) * (33 / 100) + "N";
+        }
+
+        private static string ConvertToRankine(double kelvin)
+        {
+            return kelvin * (9 / 5) + "R";
+        }
+
+        private static string ConvertToDelisle(double kelvin)
+        {
+            return (373.15 - kelvin) * (3 / 2) + "De";
+        }
+
+        private static string ConvertToKevin(double kelvin)
+        {
+            return kelvin + "K";
+        }
+
+        /////////////////////////////////////////////////////////
+        //Converting to Kelvin
+        /////////////////////////////////////////////////////////
+        private static double ConvertFromFahrenheit(double fahrenheit)
+        {
+            return (fahrenheit + 459.67) * (5 / 9);
+        }
+
+        private static double ConvertFromCelsius(double celsius)
+        {
+            return celsius + 273.15;
+        }
+
+        private static double ConvertFromRomer(double romer)
+        {
+            return (romer - 7.5) * (40 / 21) + 273.15;
+        }
+
+        private static double ConvertFromReaumur(double reaumur)
+        {
+            return reaumur * 1.25 + 273.15;
+        }
+
+        private static double ConvertFromNewton(double newton)
+        {
+            return newton * (100 / 33) + 273.15;
+        }
+
+        private static double ConvertFromRankine(double rankine)
+        {
+            return rankine / 1.8;
+        }
+
+        private static double ConvertFromDelisle(double delisle)
+        {
+            return 373.15 - (delisle * (2 / 3));
         }
     }
 }
