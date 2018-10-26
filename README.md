@@ -30,6 +30,7 @@ A CLI application that converts a unit of temperature into every other unit of t
 | -N | the number in the args is Newton|
 | -R | the number in the args is Rankine|
 | -De | the number in the args is Delisle|
+| -to | takes a unit and converts only to that unit, i.e tempman.exe 60-f -to c|
 | -RandCon | returns a random unit that is not the passed in unit|
 | -Out | takes a path and writes the conversions to a file.|
 | -Ui | runs the app in UI MODE!?!|
