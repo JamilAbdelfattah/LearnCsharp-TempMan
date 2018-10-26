@@ -34,6 +34,7 @@ A CLI application that converts a unit of temperature into every other unit of t
 | -RandCon | returns a random unit that is not the passed in unit|
 | -Out | takes a path and writes the conversions to a file.|
 | -Ui | runs the app in UI MODE!?!|
+| -help | prints a list of flags, basically this table. Bonus points if you print this exactly as it is.|
 
 ***Note:*** more features are  to come when I think of them, just so you know.
 
